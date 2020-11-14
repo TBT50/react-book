@@ -1,4 +1,6 @@
-import ProductCard from "./ProductCard";
+import { Container } from "@material-ui/core";
+
+import ProductList from "./ProductList";
 
 function App() {
   const products = [
@@ -18,11 +20,10 @@ function App() {
 
   return (
     <main>
-      <h1>Product Hunt</h1>
-
-      {products.map((product) => (
-        <ProductCard title={product.title} key={product.id} id={product.id} />
-      ))}
+      <Container>
+        <h1>Popular Products</h1>
+        <ProductList products={products} />
+      </Container>
     </main>
   );
 }

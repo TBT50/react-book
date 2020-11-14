@@ -5,6 +5,8 @@ import {
   CardActionArea,
   CardMedia,
   CardContent,
+  CardActions,
+  Button,
 } from "@material-ui/core";
 
 const useStyles = makeStyles({
@@ -16,7 +18,7 @@ const useStyles = makeStyles({
   },
 });
 
-const ProductCard = ({ title, id }) => {
+const Product = ({ title, id }) => {
   const classes = useStyles();
   return (
     <Card className={classes.root}>
@@ -27,8 +29,13 @@ const ProductCard = ({ title, id }) => {
         />
       </CardActionArea>
       <CardContent>{title}</CardContent>
+      <CardActions>
+        <Button variant="contained" color="primary">
+          BUTTON2
+        </Button>
+      </CardActions>
     </Card>
   );
 };
 
-export default ProductCard;
+export default Product;

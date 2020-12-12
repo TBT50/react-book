@@ -7,14 +7,17 @@ class App extends React.Component {
       {
         id: 1,
         title: "Item1",
+        description: "Lorem ipsum dolor sit amet.",
       },
       {
         id: 2,
         title: "Item2",
+        description: "Lorem ipsum dolor sit amet.",
       },
       {
         id: 3,
         title: "Item3",
+        description: "Lorem ipsum dolor sit amet.",
       },
     ];
 

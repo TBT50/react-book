@@ -5,7 +5,12 @@ const ProductList = ({ products }) => {
     <>
       {products.map((product) => {
         return (
-          <Product id={product.id} title={product.title} key={product.id} />
+          <Product
+            id={product.id}
+            title={product.title}
+            key={product.id}
+            description={product.description}
+          />
         );
       })}
     </>

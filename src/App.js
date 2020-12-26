@@ -19,11 +19,18 @@ class App extends React.Component {
         title: "Item3",
         description: "Lorem ipsum dolor sit amet.",
       },
+      {
+        id: 4,
+        title: "Item4",
+        description: "Lorem ipsum dolor sit amet.",
+      },
     ];
 
     return (
       <main>
-        <h1>Popular Products</h1>
+        <h1 className="text-6xl text-center font-bold my-10">
+          Popular Products
+        </h1>
         <ProductList products={products} />
       </main>
     );

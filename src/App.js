@@ -8,21 +8,25 @@ class App extends React.Component {
         id: 1,
         title: "Item1",
         description: "Lorem ipsum dolor sit amet.",
+        votes: Math.floor(Math.random() * 10),
       },
       {
         id: 2,
         title: "Item2",
         description: "Lorem ipsum dolor sit amet.",
+        votes: Math.floor(Math.random() * 10),
       },
       {
         id: 3,
         title: "Item3",
         description: "Lorem ipsum dolor sit amet.",
+        votes: Math.floor(Math.random() * 10),
       },
       {
         id: 4,
         title: "Item4",
         description: "Lorem ipsum dolor sit amet.",
+        votes: Math.floor(Math.random() * 10),
       },
     ];
 

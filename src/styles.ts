@@ -31,3 +31,11 @@ export const CardContainer = styled.li`
   margin-top: 0.5rem;
   box-shadow: #091e4240 0 1px 0 0;
 `
+
+interface AddItemsButtonProps {
+  dark: boolean
+}
+
+export const addItemButton = styled.button<AddItemsButtonProps>`
+
+`

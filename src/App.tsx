@@ -1,13 +1,7 @@
 import React from "react";
 import "./App.css";
 
-import {
-  Container,
-  AppContainer,
-  ColumnContainer,
-  ColumnTitle,
-  CardContainer,
-} from "./styles";
+import { Container, AppContainer } from "./styles";
 
 import { Column } from "./components/Column";
 import { Card } from "./components/Card";
@@ -21,17 +15,17 @@ export const App: React.FC = () => {
 
       <Container>
         <AppContainer>
-          <Column text={"Column1"}>
+          <Column text={"To do"}>
             <ul>
               <Card text="Go for a walk" />
             </ul>
           </Column>
-          <Column text={"Column2"}>
+          <Column text={"In progess"}>
             <ul>
               <Card text="Learn Typescript" />
             </ul>
           </Column>
-          <Column text={"Column3"}>
+          <Column text={"Done"}>
             <ul>
               <Card text="Learn Italian" />
             </ul>

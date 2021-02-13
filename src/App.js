@@ -2,7 +2,7 @@ import React from "react";
 
 import "./App.css";
 
-import ProductList from "./components/ProductList/ProductList";
+import PeopleList from "./components/PeopleList/PeopleList";
 
 class App extends React.Component {
   constructor(props) {
@@ -30,7 +30,7 @@ class App extends React.Component {
     } else if (!this.state.people) {
       return <p>Didn't find any person</p>;
     } else {
-      return <ProductList people={this.state.people} />;
+      return <PeopleList people={this.state.people} />;
     }
   }
 }

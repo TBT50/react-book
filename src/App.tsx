@@ -13,6 +13,7 @@ function App() {
         <li>RedBull</li>
       </ul>
       <main>This is the main content</main>
+      <footer>This is the footer</footer>
     </div>
   );
 }

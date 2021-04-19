@@ -12,6 +12,7 @@ function App() {
         <li>Mclaren</li>
         <li>RedBull</li>
         <li>Renault</li>
+        <li>Alpha Tauri</li>
       </ul>
       <main>This is the main content</main>
       <footer>This is the footer</footer>

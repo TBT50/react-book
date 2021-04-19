@@ -12,6 +12,7 @@ function App() {
         <li>Mclaren</li>
         <li>RedBull</li>
       </ul>
+      <main>This is the main content</main>
     </div>
   );
 }

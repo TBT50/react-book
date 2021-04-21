@@ -1,4 +1,5 @@
 import React from "react";
+import ListItem from "./components/ListItem";
 
 function App() {
   return (
@@ -7,12 +8,12 @@ function App() {
         <h1>VERCEL</h1>
       </header>
       <ul>
-        <li>Ferrari</li>
-        <li>Mercedes</li>
-        <li>Mclaren</li>
-        <li>RedBull</li>
-        <li>Renault</li>
-        <li>Alpha Tauri</li>
+        <ListItem car="Ferrari" />
+        <ListItem car="Mercedes" />
+        <ListItem car="Renault" />
+        <ListItem car="RedBull" />
+        <ListItem car="Mclaren" />
+        <ListItem car="AlphaTauri" />
       </ul>
       <main>This is the main content</main>
       <footer>This is the footer</footer>

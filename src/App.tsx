@@ -1,14 +1,24 @@
-import { AppContainer, ColumnContainer } from "./styles";
+import React from "react";
+
+import { AppContainer, ColumnContainer, ColumnTitle } from "./styles";
 import "./App.css";
 
-function App() {
+const App: React.FC = () => {
   return (
-    <AppContainer>
-      <ColumnContainer>123</ColumnContainer>
-      <ColumnContainer>123</ColumnContainer>
-      <ColumnContainer>123</ColumnContainer>
-    </AppContainer>
+    <>
+      <AppContainer>
+        <ColumnContainer>
+          <ColumnTitle>1443</ColumnTitle>
+        </ColumnContainer>
+        <ColumnContainer>
+          <ColumnTitle>123</ColumnTitle>
+        </ColumnContainer>
+        <ColumnContainer>
+          <ColumnTitle>123</ColumnTitle>
+        </ColumnContainer>
+      </AppContainer>
+    </>
   );
-}
+};
 
 export default App;

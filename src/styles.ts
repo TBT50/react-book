@@ -14,3 +14,16 @@ export const ColumnContainer = styled.div`
   min-height: 40px;
   padding: 8px;
 `
+export const ColumnTitle = styled.div`
+  padding: 6px 16px 12px;
+  font-weight: bold;
+`
+
+export const CardContainer = styled.div`
+  background-color: #fff;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  max-width: 300px;
+  border-radius: 3px;
+  box-shadow: #091e4240 0 1px 0 0;
+`

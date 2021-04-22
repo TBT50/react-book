@@ -1,6 +1,7 @@
 import { useState } from "react";
-import ProductList from "./components/ProductList";
+import ProductList from "./components/ProductList/ProductList";
 import "./App.css";
+import { Container } from "./styles";
 
 const products = [
   {
@@ -26,29 +27,24 @@ const products = [
 function App() {
   const [productsList, setProductsList] = useState(products);
 
-  const sortProducts = (type) => {
-    const types = {
-      id: "id",
-      votes: "votes",
-    };
-
-    const sortProperty = types[type];
+  const sortProducts = (sortProperty) => {
     const sortedProducts = [...productsList].sort(
       (a, b) => a[sortProperty] - b[sortProperty]
     );
-
     setProductsList(sortedProducts);
   };
+
   return (
-    <div className="App">
+    <Container>
       <header className="App-header">
+        <h1>Popular Products</h1>
         <ProductList productsList={productsList} />
         <select onChange={(e) => sortProducts(e.target.value)}>
           <option value="id">ID</option>
           <option value="votes">votes</option>
         </select>
       </header>
-    </div>
+    </Container>
   );
 }
 

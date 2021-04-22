@@ -1,0 +1,32 @@
+.product-list {
+  &__item {
+    text-align: left;
+    margin-bottom: 30px;
+    position: relative;
+    border-bottom: 1px solid #efefef;
+    padding-bottom: 30px;
+
+    @media (min-width: 768px) {
+      display: flex;
+    }
+  }
+
+  &__content {
+    padding: 0 10px;
+  }
+
+  &__header {
+    font-size: 25px;
+  }
+
+  &__votes {
+    font-size: 18px;
+  }
+
+  &__img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    display: block;
+  }
+}

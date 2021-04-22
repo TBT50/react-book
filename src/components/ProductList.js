@@ -1,10 +1,10 @@
 import Product from "./Product";
 
-const ProductList = () => (
+const ProductList = ({ productsList }) => (
   <ul>
-    <Product text="Product1" />
-    <Product text="Product2" />
-    <Product text="Product3" />
+    {productsList.map((product) => (
+      <Product key={product.id} name={product.name} votes={product.votes} />
+    ))}
   </ul>
 );
 

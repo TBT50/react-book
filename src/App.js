@@ -1,3 +1,4 @@
+import { useState } from "react";
 import ProductList from "./components/ProductList";
 import "./App.css";
 
@@ -23,11 +24,29 @@ const products = [
 ];
 
 function App() {
+  const [productsList, setProductsList] = useState(products);
+
+  const sortProducts = (type) => {
+    const types = {
+      id: "id",
+      votes: "votes",
+    };
+
+    const sortProperty = types[type];
+    const sortedProducts = [...productsList].sort(
+      (a, b) => a[sortProperty] - b[sortProperty]
+    );
+
+    setProductsList(sortedProducts);
+  };
   return (
     <div className="App">
       <header className="App-header">
-        <ProductList />
-        <button type="button">SORT</button>
+        <ProductList productsList={productsList} />
+        <select onChange={(e) => sortProducts(e.target.value)}>
+          <option value="id">ID</option>
+          <option value="votes">votes</option>
+        </select>
       </header>
     </div>
   );

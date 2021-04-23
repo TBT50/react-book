@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import ProductList from "./components/ProductList/ProductList";
 import "./App.css";
 import { Container } from "./styles";
@@ -22,30 +22,67 @@ const products = [
     description: "Wow, such a nice carpet, wow",
     votes: 11,
   },
+  {
+    id: 4,
+    name: "Car",
+    description: "Well it is red so it must be damn fast",
+    votes: 57,
+  },
 ];
 
-function App() {
-  const [productsList, setProductsList] = useState(products);
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      productsList: products,
+    };
+  }
 
-  const sortProducts = (sortProperty) => {
-    const sortedProducts = [...productsList].sort(
+  sortProducts = (sortProperty) => {
+    const sortedProducts = [...this.state.productsList].sort(
       (a, b) => a[sortProperty] - b[sortProperty]
     );
-    setProductsList(sortedProducts);
+    this.setState({ productsList: sortedProducts });
   };
 
-  return (
-    <Container>
-      <header className="App-header">
-        <h1>Popular Products</h1>
-        <ProductList productsList={productsList} />
-        <select onChange={(e) => sortProducts(e.target.value)}>
-          <option value="id">ID</option>
-          <option value="votes">votes</option>
-        </select>
-      </header>
-    </Container>
-  );
+  render() {
+    return (
+      <Container>
+        <header className="App-header">
+          <h1>Popular Products</h1>
+          <ProductList productsList={this.state.productsList} />
+          <select onChange={(e) => this.sortProducts(e.target.value)}>
+            <option value="id">ID</option>
+            <option value="votes">votes</option>
+          </select>
+        </header>
+      </Container>
+    );
+  }
 }
+
+// function App() {
+//   const [productsList, setProductsList] = useState(products);
+
+//   const sortProducts = (sortProperty) => {
+//     const sortedProducts = [...productsList].sort(
+//       (a, b) => a[sortProperty] - b[sortProperty]
+//     );
+//     setProductsList(sortedProducts);
+//   };
+
+//   return (
+//     <Container>
+//       <header className="App-header">
+//         <h1>Popular Products</h1>
+//         <ProductList productsList={productsList} />
+//         <select onChange={(e) => sortProducts(e.target.value)}>
+//           <option value="id">ID</option>
+//           <option value="votes">votes</option>
+//         </select>
+//       </header>
+//     </Container>
+//   );
+// }
 
 export default App;

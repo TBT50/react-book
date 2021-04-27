@@ -31,12 +31,16 @@ const products = [
 ];
 
 class App extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      productsList: products,
+      productsList: [],
     };
   }
+
+  componentDidMount = () => {
+    this.setState({ productsList: products });
+  };
 
   sortProducts = (sortProperty) => {
     const sortedProducts = [...this.state.productsList].sort(

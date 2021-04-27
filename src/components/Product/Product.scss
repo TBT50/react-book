@@ -1,10 +1,9 @@
 .product-list {
   &__item {
     text-align: left;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     position: relative;
-    border-bottom: 1px solid #efefef;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
 
     @media (min-width: 768px) {
       display: flex;
@@ -12,11 +11,12 @@
   }
 
   &__content {
-    padding: 0 10px;
+    padding: 0 20px;
   }
 
   &__header {
     font-size: 25px;
+    margin-bottom: 5px;
   }
 
   &__votes {
@@ -24,8 +24,8 @@
   }
 
   &__img {
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     object-fit: cover;
     display: block;
   }

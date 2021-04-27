@@ -1,9 +1,8 @@
 import styled from "styled-components";
 import Product from "../Product/Product";
 
-const S = {};
-S.ProductList = styled.ul`
-  grid-template-columns: 1fr 1fr 1fr;
+const StyledProductList = styled.ul`
+  margin: 30px 0;
 `;
 
 const ProductList = ({ productsList }) => {
@@ -12,7 +11,7 @@ const ProductList = ({ productsList }) => {
   };
 
   return (
-    <S.ProductList>
+    <StyledProductList>
       {productsList.map((product) => (
         <Product
           key={product.id}
@@ -22,7 +21,7 @@ const ProductList = ({ productsList }) => {
           onVote={handleProductVotes}
         />
       ))}
-    </S.ProductList>
+    </StyledProductList>
   );
 };
 
